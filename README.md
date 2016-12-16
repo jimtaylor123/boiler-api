@@ -1,6 +1,6 @@
-# LavarelAPIBoilerplateJWT
+# LaravelAPIBoilerplateJWT
 
-Example Lavarel API Boilerplate JWT
+Example Laravel API Boilerplate JWT
 
 ## Install with Composer
 

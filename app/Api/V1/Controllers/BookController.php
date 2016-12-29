@@ -18,11 +18,11 @@ class BookController extends Controller
     {
     	$currentUser = JWTAuth::parseToken()->authenticate();
 
-		return $currentUser
-        	->books()
-        	->orderBy('created_at', 'DESC')
-        	->get()
-        	->toArray();
+        return $currentUser
+                    ->books()
+                    ->orderBy('created_at', 'DESC')
+                    ->get()
+                    ->toArray();
     }
 
     public function show($id)
@@ -36,7 +36,6 @@ class BookController extends Controller
         }
 
         return $book;
-
     }
 
     public function store(Request $request)
@@ -60,17 +59,16 @@ class BookController extends Controller
     public function update(Request $request, $id)
     {
         $currentUser = JWTAuth::parseToken()->authenticate();
-
         $book = $currentUser->books()->find($id);
 
         if (!$book) {
-            throw new NotFoundHttpException;
+        throw new NotFoundHttpException;
         }
 
         $book->fill($request->all());
 
         if ($book->save()) {
-            return $book;
+        return $book;
         }
 
         return $this->response->error('could_not_update_book', 500);
@@ -79,7 +77,6 @@ class BookController extends Controller
     public function destroy($id)
     {
         $currentUser = JWTAuth::parseToken()->authenticate();
-
         $book = $currentUser->books()->find($id);
 
         if (!$book) {

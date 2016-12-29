@@ -14,8 +14,8 @@ class BookController extends Controller
 {
     use Helpers;
 
-	public function index()
-	{
+    public function index()
+    {
     	$currentUser = JWTAuth::parseToken()->authenticate();
 
 		return $currentUser
@@ -23,10 +23,10 @@ class BookController extends Controller
         	->orderBy('created_at', 'DESC')
         	->get()
         	->toArray();
-	}
+    }
 
-	public function show($id)
-	{
+    public function show($id)
+    {
         $currentUser = JWTAuth::parseToken()->authenticate();
 
         $book = $currentUser->books()->find($id);
@@ -37,10 +37,10 @@ class BookController extends Controller
 
         return $book;
 
-	}
+    }
 
-	public function store(Request $request)
-	{
+    public function store(Request $request)
+    {
 		$currentUser = JWTAuth::parseToken()->authenticate();
 
 		$book = new Book;
@@ -49,16 +49,16 @@ class BookController extends Controller
 
 		if ($currentUser->books()->save($book)) {
 
-			//return $this->response->created([$book], 200);
-			//$this->response->created();
-			return response()->json($book,200);
+			// return $this->response->created([$book], 200);
+            // or
+            return response()->json($book,200);
 		}
 
 		return $this->response->error('could_not_create_book', 500);
-	}
+    }
 
-	public function update(Request $request, $id)
-	{
+    public function update(Request $request, $id)
+    {
         $currentUser = JWTAuth::parseToken()->authenticate();
 
         $book = $currentUser->books()->find($id);
@@ -74,10 +74,10 @@ class BookController extends Controller
         }
 
         return $this->response->error('could_not_update_book', 500);
-	}
+    }
 
-	public function destroy($id)
-	{
+    public function destroy($id)
+    {
         $currentUser = JWTAuth::parseToken()->authenticate();
 
         $book = $currentUser->books()->find($id);
@@ -91,5 +91,5 @@ class BookController extends Controller
         }
 
         return $this->response->error('could_not_delete_book', 500);
-	}
+    }
 }

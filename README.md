@@ -1,5 +1,7 @@
 # LaravelAPIBoilerplateJWT
 
+[![Build Status](https://travis-ci.org/Tony133/Symfony3APIBoilerplateJWT.svg?branch=master)](https://travis-ci.org/Tony133/Symfony3APIBoilerplateJWT)
+
 Example Laravel API Boilerplate JWT
 
 ## Install with Composer

@@ -7,7 +7,8 @@ Example API Boilerplate JWT with Laravel 5.5 LTS
 ## Install with Composer
 
 ```
-    $ composer create-project tony133/laravel-api-boilerplate-jwt myProject
+    $ curl -s http://getcomposer.org/installer | php
+    $ php composer.phar install or composer install
 ```
 
 ## User Registration with Curl

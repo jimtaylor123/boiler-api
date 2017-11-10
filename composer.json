@@ -1,6 +1,6 @@
 {
     "name": "tony133/laravel-api-boilerplate-jwt",
-    "description": "An API Boilerplate to create a ready-to-use REST API in seconds.",
+    "description": "An API Boilerplate to create a ready-to-use REST API in seconds with Laravel 5.5 LTS",
     "keywords": ["laravel", "api", "boilerplate", "jwt"],
     "license": "MIT",
     "type": "project",

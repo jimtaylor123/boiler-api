@@ -11,14 +11,23 @@ Simple example of a API Boilerplate JWT with Laravel 5.5 LTS
     $ php composer.phar install or composer install
 ```
 
+## Set Environment
+
+```
+    $ cp .env.example .env
+```
+
+## Set the application key
+
+```
+   $ php artisan key:generate
+```
+
 ## User Registration with Curl
 ```	
-	$ curl  -H 'content-type: application/json' -v -X POST -d '{"name":"tony","email":"tony_admin@lavarel.com","password":"admin"}' http://localhost:8000/api/auth/signup
+	$ curl  -H 'content-type: application/json' -v -X POST -d '{"name":"tony","email":"tony_admin@lavarel.com","password":"admin"}' http://127.0.0.1:8000/api/auth/signup
 ```
 ## User Authentication with Curl
 ```
-	$ curl  -H 'content-type: application/json' -v -X POST -d '{"email":"tony_admin@lavarel.com","password":"admin"}' http://localhost:8000/api/auth/login
+	$ curl  -H 'content-type: application/json' -v -X POST -d '{"email":"tony_admin@lavarel.com","password":"admin"}' http://127.0.0.1:8000/api/auth/login
 ```
-## Example with LaravelAPIBoilerplateJWT
-
-* [How to Build an API-Only JWT Laravel App](https://github.com/Tony133/LaravelAPIBoilerplateJWTBook)

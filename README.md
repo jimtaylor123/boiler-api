@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Tony133/LaravelAPIBoilerplateJWT.svg?branch=master)](https://travis-ci.org/Tony133/LaravelAPIBoilerplateJWT)
 
-Simple example of a API Boilerplate JWT with Laravel 5.5 LTS
+Simple example of a API Boilerplate JWT with Laravel 6 LTS
 
 ## Install with Composer
 

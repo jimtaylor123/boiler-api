@@ -3,10 +3,10 @@
 namespace App;
 
 use Tymon\JWTAuth\Contracts\JWTSubject;
-use Hash;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Hash;
 
 class User extends Authenticatable implements JWTSubject
 {
@@ -38,17 +38,6 @@ class User extends Authenticatable implements JWTSubject
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    /**
-     * Automatically creates hash for the user password.
-     *
-     * @param  string  $value
-     * @return void
-     */
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = Hash::make($value);
-    }
 
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.

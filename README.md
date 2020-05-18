@@ -11,6 +11,12 @@ Simple example api authentication JWT with Laravel 7.x
     $ php composer.phar install or composer install
 ```
 
+## Set Environment
+
+```
+    $ cp .env.example .env
+```
+
 ## Set the application key
 
 ```

@@ -1,8 +1,8 @@
-# LaravelApiAuthenticationJWT
+# LaravelAPIBoilerplateJWT
 
 [![Build Status](https://travis-ci.org/Tony133/LaravelAPIBoilerplateJWT.svg?branch=master)](https://travis-ci.org/Tony133/LaravelAPIBoilerplateJWT)
 
-Simple example api authentication JWT with Laravel 7.x
+An API Boilerplate to create a ready-to-use REST API in seconds with Laravel 7.x
 
 ## Install with Composer
 

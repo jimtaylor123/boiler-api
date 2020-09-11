@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Tony133/laravel-api-boilerplate-jwt.svg?branch=master)](https://travis-ci.org/Tony133/laravel-api-boilerplate-jwt)
 
-An API Boilerplate to create a ready-to-use REST API in seconds with Laravel 7.x
+An API Boilerplate to create a ready-to-use REST API in seconds with Laravel 8.x
 
 ## Install with Composer
 

@@ -22,8 +22,8 @@ Route::group(['middleware' => 'api'], function($router) {
     Route::get('/hello', function() {
         return response()->json([
             'message' => 'This is a simple example of item returned by your APIs. Everyone can see it.'
-        ])->name('api.hello');
-    });
+        ]);
+    })->name('api.hello');
 });
 
 Route::group(['middleware' => 'api','prefix' => 'auth'], function ($router) {

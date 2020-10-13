@@ -24,7 +24,7 @@ class ForgotPasswordController extends Controller
     {
         $passwordRandom = $this->getRandomPassword();
         $user = User::where('email', '=', $request->get('email'))->first();
-        $user->password = bcrypt($passwordRandom);
+        $user->password = $passwordRandom;
         $user->save();
 
         Notification::send($user, new UserForgotPassword($user, $passwordRandom));

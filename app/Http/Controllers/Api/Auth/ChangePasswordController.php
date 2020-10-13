@@ -18,7 +18,7 @@ class ChangePasswordController extends Controller
     public function store(ChangePasswordRequest $request)
     {
         $user = User::where('email', '=', $request->get('email'))->first();
-        $user->password = bcrypt($request->get('password'));
+        $user->password = $request->get('password');
         $user->save();
 
         if (!$user) {

@@ -28,7 +28,7 @@ Route::group(['middleware' => 'api'], function($router) {
 
 Route::group(['middleware' => 'api','prefix' => 'auth'], function ($router) {
     Route::post('/login', 'App\Http\Controllers\Api\Auth\LoginController@store')->name('api.auth.login');
-    Route::post('/register', 'App\Http\Controllers\Api\Auth\RegisterController@store')->name('api.auth.register');
+    // Route::post('/register', 'App\Http\Controllers\Api\Auth\RegisterController@store')->name('api.auth.register');
     Route::post('/forgot', 'App\Http\Controllers\Api\Auth\ForgotPasswordController@store')->name('api.auth.forgot.password');
 
 
